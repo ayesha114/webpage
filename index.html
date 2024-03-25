@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="mobile-menu-icon">
+        <span>&#9776;</span> <!-- Menu icon (Hamburger icon) -->
+    </label>
+        
+        <div class="nav-left">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li class="dropdown">
+                    <button class="dropbtn">About
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#">About Us<i class="fa fa-caret-right"></i></a>
+                        <a href="#">Privacy Policy <i class="fa fa-caret-right"></i></a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <button class="dropbtn">Services
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#">First Service <i class="fa fa-caret-right"></i></a>
+                        <a href="#">Second Service <i class="fa fa-caret-right"></i></a>
+                        <a href="#">Third Service <i class="fa fa-caret-right"></i></a>
+                    </div>
+                </li>
+                <li><a href="#">Blogs</a></li>
+            </ul>
+        </div>
+
+        <img class="logo" src="images/logo.png" alt="Logo">
+
+        <input type="checkbox" id="social-toggle" class="social-toggle">
+        <label for="social-toggle" class="three-dot-icon">&#8942;</label>
+
+        <div class="nav-right">
+            <ul>
+                <li><a href="#"><img src="images/download.png" alt="Facebook"></a></li>
+                <li><a href="#"><img src="images/gle.png" alt="Google+"></a></li>
+                <li><a href="#"><img src="images/download (1).png" alt="Instagram"></a></li>
+            </ul>
+            <div class="btn">
+                <button><a href="#">Track</a></button>
+                <button><a href="#">Get a Quote</a></button>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <!-- Slider controls -->
+        <input type="radio" name="slider" id="slide1" checked>
+        <input type="radio" name="slider" id="slide2">
+        <input type="radio" name="slider" id="slide3">
+        
+        <!-- Slides -->
+        <div class="slide" id="slider">
+            <div class="image-container">
+                <div class="slide-image" style="background-image: url('images/427af3157217832e2f9cd926584873b8.jpg');"></div>
+                <div class="slide-image" style="background-image: url('images/e15a280c2405abea16c56d0a391d646f.jpg');"></div>
+                <div class="slide-image" style="background-image: url('images/bg.jpg');"></div>
+            </div>
+            
+            <!-- Overlay Text -->
+            <hr style="color: white; font-size: 20px;">
+            <div class="header-text">Professional Trucking <br> and Transportation Services</div>
+            <button class="head"><a href="#">Read More</a></button>
+        </div>
+        
+        <!-- Dots for navigation -->
+        <div class="dots">
+            <label for="slide1" class="dot"></label>
+            <label for="slide2" class="dot"></label>
+            <label for="slide3" class="dot"></label>
+        </div>
+    </header>
+
+    <section class="services-section">
+        <h1>Our Services</h1>
+        <div class="services-container">
+          <div class="service">
+            <img src="images/ser1.jpeg" alt="First Service">
+            <div class="overlay">
+              <div class="overlay-text">
+                <span class="line"></span>
+                <p>FIRST SERVICE</p>
+                <span class="line"></span>
+              </div>
+            </div>
+          </div>
+          <div class="service">
+            <img src="images/ser2.jpeg" alt="Second Service">
+            <div class="overlay">
+              <div class="overlay-text">
+                <span class="line"></span>
+                <p>SECOND SERVICE</p>
+                <span class="line"></span>
+              </div>
+            </div>
+          </div>
+          <div class="service">
+            <img src="images/ser3.jpeg" alt="Third Service">
+            <div class="overlay">
+              <div class="overlay-text">
+                <span class="line"></span>
+                <p>THIRD SERVICE</p>
+                <span class="line"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-us">
+        <div class="container">
+          <h1>About Us</h1>
+          <p>Hello World!</p>
+          <button class="read-more-btn">READ MORE</button>
+        </div>
+      </section>
+
+
+      <section class="stats-and-image-section">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <h1>12</h1>
+            <p>COUNTRIES COVERED</p>
+          </div>
+          <div class="stat-item">
+            <h1>10</h1>
+            <p>YEARS OF EXPERIENCE</p>
+          </div>
+          <div class="stat-item">
+            <h1>23</h1>
+            <p>OFFICES WORLDWIDE</p>
+          </div>
+          <div class="stat-item">
+            <h1>98</h1>
+            <p>HARDWORKING PEOPLE</p>
+          </div>
+        </div>
+        <div class="image-container">
+          <img src="images/stat.jpg" alt="Right Side Image">
+        </div>
+      </section>
+
+
+      <section class="testimonials" style="background-image: url('images/bg-image-10.jpg');">
+        <div class="testimonials-background">
+          <div class="container">
+            <h1>Testimonials</h1>
+            <div class="testimonial-wrapper">
+              <!-- Navigation arrow left -->
+              <div class="testimonial-nav left">&#10094;</div>
+      
+              <!-- Testimonial 1 -->
+              <div class="testimonial">
+                <img src="images/test1.jpg" alt="Walter Williams" class="testimonial-image">
+                <p class="testimonial-text">"I can’t think of a better transportation service than [Company]."</p>
+                <p class="testimonial-author">Walter Williams, Architect</p>
+              </div>
+              <!-- Navigation arrow right -->
+              <div class="testimonial-nav right">&#10095;</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="blog-posts">
+        <h2>Blog Posts</h2>
+        <div class="post-container">
+            <!-- Blog Post -->
+            <div class="blog-post">
+                
+                <div class="post-body">
+                    <div class="post-image">
+                        <img src="images/blog1.jpeg" alt="Second Blog Post">
+                    </div>
+                    <div class="post-info"> <!-- New container for date and text -->
+                      <div class="post-date">
+                        <span class="date-day">18</span>
+                        <span class="date-month">October</span>
+                      </div>
+                      <div class="post-content">
+                        <h5 class="post-title">Second Blog Post</h5>
+                        <p class="post-excerpt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem alias neque amet, delectus quaerat, nisi impedit voluptate corrupti aut aspernatur dolorem harum, iste tenetur nihil aliquid cumque ad repellendus nemo.</p>
+                      </div>
+                    </div>
+              </div>
+                </div>
+           
+            <!-- Repeat for additional blog posts -->
+            <div class="blog-post">
+              <div class="post-body">
+                  <div class="post-image">
+                      <img src="images/blog2.jpeg" alt="Second Blog Post">
+                  </div>
+                  <div class="post-info"> <!-- New container for date and text -->
+                    <div class="post-date">
+                      <span class="date-day">19</span>
+                      <span class="date-month">October</span>
+                    </div>
+                    <div class="post-content">
+                      <h5 class="post-title">First Blog Post</h5>
+                      <p class="post-excerpt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem alias neque amet, delectus quaerat, nisi impedit voluptate corrupti aut aspernatur dolorem harum, iste tenetur nihil aliquid cumque ad repellendus nemo.</p>
+                    </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+        <div class="btn">
+          <button class="read-more"><a href="">More</a></button>
+        </div>
+        </div>
+    </section>
+
+    <section class="map-section">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d217324.28702686597!2d74.23764883587567!3d31.582045450000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919045a5e8f0ba1%3A0xa2ad70adbb8118a7!2sLahore%2C%20Pakistan!5e0!3m2!1sen!2s!4v1642359098653!5m2!1sen!2s"
+        width="600"
+        height="450"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy">
+      </iframe>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contacts</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Opening Hours</h3>
+          <p>Monday To Sunday: 24/7</p>
+        </div>
+        <div class="footer-column">
+          <h3>Phone</h3>
+          <p>+92 333 123 4567</p>
+          <p>info@domain.com</p>
+        </div>
+        <div class="footer-column">
+          <h3>Address</h3>
+          <p>ABC, Lahore Pakistan</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2023. Privacy Policy</p>
+      </div>
+    </footer>
+</body>
+</html>

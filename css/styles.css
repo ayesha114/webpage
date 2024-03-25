@@ -1,0 +1,1156 @@
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    position: sticky;
+    top: 0;
+    flex-wrap: wrap;
+    background: #ffffff;
+    padding: 15px 80px;
+    justify-content: space-around;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: bold;
+    z-index: 1;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.mobile-menu-icon {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 5;
+}
+
+
+.nav-left ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    flex-grow: 1;
+    margin: 8px 20px;
+    font-size: 1em;
+
+}
+
+.nav-left li {
+    list-style: none;
+    margin: 10px 5px;
+}
+
+.nav-left li a:hover {
+    color: #90c8ed;
+  }
+
+.nav-left li a {
+    padding: 20px 12px;
+    text-decoration: none;
+    color: rgb(60, 59, 59);
+    font-size: 1em;
+}
+
+.nav-left li a:hover {
+    color: #7a8c90;
+}
+
+
+
+.dropbtn {
+    background-color: white;
+    color: rgb(60, 59, 59);
+    padding: 0px 8px;
+    font-size: 1em;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Dropdown caret */
+.dropbtn .fa-caret-down {
+    position: relative;
+    left: 2px;
+    top: 5px;
+    transform: translateY(-50%);
+    
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff; /* Background of the dropdown */
+    min-width: 250px; /* Minimum width */
+    padding: 0px 20px;
+    z-index: 1; /* Ensure on top */
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: #333; /* Text color */
+    padding: 0px 20px; /* Spacing */
+    text-decoration: none; /* No underline */
+    display: block; /* Block level - new line */
+    position: relative; /* For positioning the caret */
+}
+
+/* Caret for dropdown items */
+.dropdown-content a .fa-caret-right {
+    position: absolute;
+    left: 2px;
+    padding-right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.dropdown:hover .dropbtn .fa-caret-down,
+.dropdown:focus-within .dropbtn .fa-caret-up {
+    transform: translateY(-50%) rotate(180deg); /* Flip the caret */
+}
+
+/* Remove the border from the last item */
+.dropdown-content a:last-child {
+    border-bottom: none;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    color: #7a8c90;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.nav-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.nav-right ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.nav-right ul img {
+    width: 15px;
+    height: 15px;
+    margin: 20px 10px;
+}
+
+.btn button {
+    padding: 12px 30px;
+    margin: 10px 8px;
+    border: 2px solid #c7c8c9;
+    background-color: white;
+}
+
+.btn button a {
+    text-decoration: none;
+    color: black;
+    font-size: 1em;
+}
+
+.btn button:hover {
+    color: white;
+    background-color: #7a8c90;
+}
+
+.header-image img {
+   
+    min-height: auto;
+    width: 100%;
+}
+
+.logo {
+    width: 130px;
+    height: auto;
+    order: 0;
+}
+
+.three-dot-icon {
+    display: none;
+    font-size: 24px;
+    color: black;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 5;
+    pointer-events: auto;
+}
+
+.social-toggle {
+    display: none;
+}
+
+
+header {
+    position: relative;
+    height: 86vh; /* Adjust as needed */
+  }
+  
+  /* Hide radio buttons */
+  input[type="radio"] {
+    display: none;
+  }
+  
+  /* Styles for the slides */
+  .slide-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 1s ease-in-out;
+    opacity: 0;
+  }
+  
+  /* Show the first slide by default */
+  #slide1:checked ~ #slider .slide-image:nth-child(1),
+  #slide2:checked ~ #slider .slide-image:nth-child(2),
+  #slide3:checked ~ #slider .slide-image:nth-child(3) {
+    opacity: 1;
+  }
+  
+  /* Automatic slider */
+  @keyframes slide-animation {
+    0%, 100% { opacity: 0; }
+    5%, 33% { opacity: 1; }
+    5%, 33%{opacity: 2;}
+  }
+  
+  .image-container {
+    height: 100%;
+  }
+  
+  /* Apply animatio n to each slide image */
+  .slide-image {
+    animation: slide-animation  15s infinite;
+  }
+  
+  /* Delay each slide animation */
+  .slide-image:nth-child(1) { animation-delay: -10s; }
+  .slide-image:nth-child(2) { animation-delay: -5s; }
+  .slide-image:nth-child(3) { animation-delay: 0s; }
+  
+  /* Header text overlay styles */
+  .header-text {
+    position: absolute;
+    top: 45%;
+    left: 33%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 3em;
+    z-index: 2;
+    font-weight: 600;
+  }
+  
+  hr {
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    width: 4%; /* Adjust the width as needed */
+    color: white;
+    z-index: 2;
+    background-color: white;
+    height: 5px;
+}
+
+/* Style for CSS button */
+button.head {
+    position: absolute;
+    top: 65%;
+    left: 18%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: #0b60df;
+    font-weight: bold;
+    font-size: 0.8em;
+    padding: 20px 45px;
+    text-transform: uppercase;
+    border: 3px solid white;
+    cursor: pointer;
+}
+
+/* Style for the link inside the button */
+button.head a {
+    color: white;
+    text-decoration: none;
+}
+
+button.head:hover {
+    color: white;
+    background-color: #3a7de1;
+    cursor: pointer;
+}
+
+  /* Dots navigation styles */
+  .dots {
+    position: absolute;
+    right: 15%;
+    top: 45%;
+    z-index: 2;
+    pointer-events: auto;
+  }
+  
+  .dot {
+    display: block;
+    width: 15px;
+    height: 15px;
+    margin: 7px 0;
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    pointer-events: auto;
+  }
+  
+  .services-section {
+    text-align: center;
+    padding: 90px 185px;
+    background-color: #f2f3f8;
+  }
+  .services-section h1{
+    font-size: 3em;
+    margin-top: 10px;
+  }
+  
+  .services-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-start; /* Adjusted to space-around for even spacing */
+    flex-wrap: nowrap; /* Changed to wrap to allow for responsive stacking */
+  }
+  
+  .service {
+    margin: 15px;
+    position: relative;
+    width: calc(25.222% - 13px); /* Adjusted for equal width with margin */
+    overflow: hidden; /* Ensures the overlay is contained within the image borders */
+    box-sizing: border-box; /* Ensures padding and border are included in the width */
+  }
+  
+  .service img {
+    width: 100%; /* Full width of the parent container */
+    display: block; /* Ensures no extra space below the image */
+    transition: transform 0.3s ease;
+  }
+  
+  .service:hover img {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(166, 178, 181, 0.5); /* Semi-transparent overlay */
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .overlay-text {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    transform: scale(0);
+    transition: transform 0.3s ease-out;
+  }
+  
+  .overlay-text p {
+    color: white;
+    font-size: 20px; /* Adjusted for readability */
+    position: relative;
+    padding: 10px 0; /* Padding for top and bottom */
+  }
+  
+  .line {
+    position: absolute;
+    height: 4%; /* Line thickness */
+    background: white;
+    width: 0; /* Start with no width */
+    transition: width 0.5s ease-out;
+  }
+  
+  .overlay-text p:before,
+  .overlay-text p:after {
+    content: '';
+    position: absolute;
+    height: 4%; /* Line thickness */
+    background: white;
+    width: 0;
+    transition: width 0.5s ease-out;
+  }
+  
+  .overlay-text p:before {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); /* Center the line */
+  }
+  
+  .overlay-text p:after {
+    bottom: 0;
+    right: 50%;
+    transform: translateX(50%); /* Center the line */
+  }
+  
+  .service:hover .overlay {
+    opacity: 1;
+  }
+  
+  .service:hover .overlay-text {
+    transform: scale(1);
+  }
+  
+  .service:hover .overlay-text p:before,
+  .service:hover .overlay-text p:after {
+    width: 100%; /* Full width on hover */
+  }
+
+  .about-us {
+    text-align: center; /* Center everything in the about-us section */
+    padding: 70px 0; /* Add some padding above and below the content */
+    background-color: #f9f9f9; /* Light grey background, adjust color as needed */
+    box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.1); /* Top side shadow */
+  }
+  
+  .about-us .container {
+    max-width: 1200px; /* Max width of the content, can be adjusted */
+    margin: 0 auto; /* Center the container */
+    padding: 0 15px; /* Add some padding on the left and right */
+  }
+  
+  .about-us h1 {
+    font-size: 3em; /* Large font size for the heading */
+    font-weight: bold;
+    margin-bottom: 20px; /* Space below the heading */
+    color: #333; /* Dark grey color for the text, adjust as needed */
+  }
+  
+  .about-us p {
+    font-size: 1em; /* Standard font size for the paragraph */
+    margin-bottom: 30px; /* Space below the paragraph */
+    color: #9b9b9b;
+  }
+  
+  .read-more-btn {
+    background-color: #007bff; /* Bootstrap primary button color, can be adjusted */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    padding: 15px 35px; /* Padding inside the button */
+    font-size: 1em; /* Font size */
+    cursor: pointer; /* Cursor indicates button can be clicked */
+    transition: background-color 0.8s; /* Transition for hover effect */
+  }
+  
+  .read-more-btn:hover {
+    background-color: #989898;
+  }
+
+  .stats-and-image-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    background-color: #f5f5f5; /* Adjust the background color as needed */
+  }
+  
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2px; /* Adjust the gap as needed */
+    flex-grow: 1;
+  }
+  
+  .stat-item {
+    background-color: #7a8c90; /* Adjust the background color as needed */
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .stat-item h1 {
+    font-size: 4em; /* Adjust the font size as needed */
+    margin: 0;
+  }
+  
+  .stat-item p {
+    font-size: 1em; /* Adjust the font size as needed */
+    margin-top: 10px;
+  }
+  
+  .stats-and-image-section .image-container {
+    flex-basis: 50%; /* Adjust if the image should take less/more space */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .stats-and-image-section  .image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+
+  
+  .testimonials {
+    margin-top: 150px;
+    background-color: #f2f3f8;
+    background-size: cover;
+    padding: 8% 0; /* Adjust padding to your preference */
+    text-align: center;
+    color: white;
+  }
+
+  .testimonials-background h1{
+    font-size: 3em;
+    padding-bottom: 50px;
+  }
+  .container {
+    width: 70%;
+    margin: auto;
+    position: relative;
+  }
+  
+  .testimonial-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .testimonial {
+    color: white;
+    padding: 20px;
+    margin: 0 15px;
+    width: 600px;
+  }
+  
+  .testimonial-image {
+    width: 100px; 
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 30px;
+  }
+  
+  .testimonial-text {
+    color: white;
+  }
+  
+  .testimonial-author {
+    font-weight: bold;
+    margin-top: 30px;
+  }
+  
+  .testimonial-nav {
+    cursor: pointer;
+    position: absolute;
+    top: 60%;
+    transform: translateY(-50%);
+    font-size: 4em;
+    color: white;
+
+  }
+  
+  .left {
+    left: 0;
+  }
+  
+  .right {
+    right: 0;
+  }
+
+
+  .blog-posts {
+    max-width: 1200px;
+    margin: auto;
+    padding: 70px 0;
+    flex-wrap: wrap; /* Allow wrapping for responsiveness */
+
+}
+
+.blog-posts h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 3em;
+}
+
+.post-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping for responsiveness */
+  justify-content: space-around; /* This will provide equal space around the items */
+  align-items: flex-start; /* Align items to the start of the container */
+}
+
+.blog-post {
+    width: calc(50% - 10px); /* Calculate width for spacing, adjust 10px if needed for gutter */
+    margin-bottom: 30px;
+    background-color: #ffffff; /* White background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for subtle depth */
+}
+
+.post-image img {
+  width: 100%;
+  height: auto; /* Changed to auto to maintain aspect ratio */
+  display: block;
+}
+
+
+
+.post-info {
+  display: flex; /* Use flexbox to align date and content */
+  padding: 20px 20px; /* Padding for internal spacing */
+}
+
+.post-date {
+  flex: 0 0 auto; /* Do not grow or shrink the date container */
+  margin-right: 20px; /* Margin between date and content */
+}
+
+.post-content {
+  flex: 1; /* Allow the content to fill the remaining space */
+  margin-top: 10px;
+
+}
+
+.date-day {
+    font-size: 3rem; 
+    font-weight: bold;
+    color: #666; /* Dark grey color for contrast */
+    display: block; /* Ensure the day is on its own line */
+}
+
+.date-month {
+    font-size: 1rem; 
+    text-transform: uppercase;
+    color: #666; /* Lighter grey color for contrast */
+    display: block; /* Ensure the month is on its own line */
+    margin-bottom: 10px;
+}
+.post-title{
+  font-size: 1.5em;
+  color: #464646;
+  margin-top: 10px;
+}
+
+.post-excerpt{
+
+  color: #9b9b9b;
+  margin-top: 20px;
+}
+
+.btn{
+  text-align: center;
+}
+
+.btn .read-more {
+  background-color: #007bff; /* Bootstrap primary button color, can be adjusted */
+  color: white; /* Text color */
+  border: none; /* Remove border */
+  padding: 15px 40px; /* Padding inside the button */
+  font-size: 1em; /* Font size */
+  cursor: pointer; /* Cursor indicates button can be clicked */
+  transition: background-color 0.8s; /* Transition for hover effect */
+}
+.btn .read-more a{
+  color: white;
+  text-decoration: none;
+}
+
+.read-more:hover {
+  background-color: #989898;
+}
+
+.map-section {
+  width: 100%;
+  overflow: hidden; /* Ensures no scroll bars appear */
+}
+
+.map-section iframe {
+  width: 100%;
+  height: 400px; /* Adjust height as needed */
+  border: none; /* Removes the default iframe border */
+  display: block; /* Removes any extra space below the iframe */
+}
+
+.site-footer {
+  background-color: #7a8c90; /* Adjusted background color */
+  color: #fff;
+  padding: 35px 0; /* Adjust padding as needed */
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between; /* Adjusted for even spacing */
+  align-items: start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px; /* Added padding for mobile screens */
+}
+
+.footer-column h3 {
+  margin-bottom: 20px;
+  font-size: 1.5em;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li a {
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 10px;
+  display: block;
+  position: relative;
+  padding-left: 20px;
+}
+
+.footer-column ul li a::before {
+  content: '>';
+  color: #fff;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  border-top: 1px solid #ccc; /* Change the color of the line */
+  text-align: center;
+  padding-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 30px 20px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 10;
+    }
+
+    .mobile-menu-icon,
+    .three-dot-icon {
+        display: block;
+        color: black;
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        right: 20px; /* Adjust if needed for the position of the three-dot icon */
+        z-index: 5;
+    }
+
+    .nav-left,
+    .nav-right {
+        display: none; /* Hide by default */
+        position: fixed;
+        top: 60px; /* Below the nav icons */
+        width: 100%;
+        background-color: white;
+        overflow-y: auto;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .nav-left {
+        height: 600px;
+        left: 0;
+        transform: translateX(-100%); /* Hide to the left */
+        z-index: 15;
+    }
+    
+    /* Right Nav specific styles */
+    .nav-right {
+
+        right: 0;
+        transform: translateX(100%); /* Hide to the right */
+    }
+    /* When three-dot icon is clicked (social-toggle checked) */
+    #social-toggle:checked ~ .nav-right {
+        display: flex;
+        flex-direction: row; /* Align items in a row */
+        position: absolute; /* Position them on top of other elements */
+        top: 60px; /* Adjust this value to fit your layout */
+        left: 0;
+        padding: 20px 20px; /* Give some padding inside the nav-right */
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Optional: Adds shadow for better visibility */
+        z-index: 4; /* Ensure it's below the three-dot icon */
+        transform: translateX(0); /* Show from the left */
+    }
+
+    #nav-toggle:checked ~ .nav-left {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Adjust based on your header's height */
+        left: -3px;
+        width: 40%; /* Full width */
+        background-color: white; /* Background color for the menu */
+        z-index: 10; /* Make sure it's on top of other content */
+        transform: translateX(0); /* Show from the left */
+    }
+
+    #social-toggle:checked ~ .nav-left {
+        display: none;
+    }
+    
+    .nav-left ul {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        height: 50%;
+    }
+
+    .nav-left li {
+        display: block; /* Make sure list items are displayed as block elements */
+        width: 100%; /* List items take full width */
+        align-items: center;
+
+    }
+
+    .nav-left li a {
+        display: block;
+        width: 100%; /* Full width for links */
+        padding: 5px 5px; /* Add padding for tap targets */
+        text-decoration: none;
+        color: black; /* Text color for the links */
+       
+    }
+
+    .nav-left li a:hover {
+        background-color: #7a8c90;
+        display: block;
+        color: white;
+        align-items: center;
+      }
+
+    .nav-right li a {
+        display: block;
+        width: 50%;
+
+        text-decoration: none;
+        color: black; /* Make sure the color is visible on white background */
+    }
+
+    .nav-right ul li a img {
+        width: 20px; /* Set a fixed width for the icons */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .btn {
+        display: flex;
+        justify-content: center; /* Center the buttons */
+        align-items: center;
+    }
+
+    .btn button {
+        padding: 12px 20px; /* Adjust padding as needed */
+        margin: 0 10px; /* Space out the buttons */
+        border: 2px solid #c7c8c9;
+        background-color: white;
+    }
+
+    .btn button a {
+        text-decoration: none;
+        color: black;
+        font-size: 1em;
+    }
+
+    .btn button:hover {
+        color: white;
+        background-color: #7a8c90;
+    }
+
+    .header-image img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .logo {
+        position: absolute;
+        left: 50px;
+        top: 3px;
+        width: 70px;
+        height: 50px;
+    }
+    
+    .dropbtn {
+        background-color: white;
+        color: rgb(60, 59, 59);
+        font-size: 1em;
+        border: none;
+        cursor: pointer;
+        text-transform: uppercase;
+        width: 100%;
+        text-align: left;
+        padding: 15px 15px;
+        visibility: hidden;
+        position: relative;
+    }
+    
+    /* Hide the actual dropdown toggle (checkbox) */
+    .drop-toggle {
+        display: none;
+        
+    }
+    
+    /* Dropdown content styles */
+    .dropdown-content {
+        visibility: hidden;
+        width: 100%;
+        display: none;
+        box-shadow: none;
+        border-top: none;
+    }
+    
+    /* Display dropdown content when corresponding toggle is checked */
+    .drop-toggle:checked + .dropbtn + .dropdown-content {
+        display: block;
+    }
+    
+    /* Dropdown item styles */
+    .dropdown-content a {
+        
+        padding: 10px 20px;
+        text-decoration: none;
+        color: black;
+        display: block;
+        background-color: #f9f9f9; /* Slightly off-white background */
+        border-bottom: 1px solid #e1e1e1; /* Light border for separation */
+    }
+    
+    /* Hover effect for dropdown items */
+    .dropdown-content a:hover {
+        background-color: #e1e1e1;
+    }
+    
+    /* Caret styles */
+    .dropbtn .fa-caret-down {
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    header {
+        height: 50;
+      }
+    
+      .slide-image {
+        height: 85vh; /* Adjust as needed */
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+      }
+    
+      .header-text {
+        top: 45%;
+        left: 35%;
+        transform: translate(-50%, -50%);
+        font-size: 1.3em;
+        position: absolute;
+        font-weight: 700;
+      }
+    
+      hr {
+        top: 35%;
+        width: 15%;
+        left: 14%;
+      }
+    
+      button.head {
+        top: 60%;
+        left: 23%;
+        transform: translate(-50%, -50%);
+        font-size: 1em;
+        padding: 15px 30px;
+      }
+      .dots{
+        right: 2%;
+        top: 45%;
+      }
+    
+      .dot{
+        border-radius: 50%;
+        width: 8px;
+        height: 8px;
+      }
+      .services-section {
+        padding: 50px 20px;
+      }
+    
+      .services-section h1 {
+        font-size: 2em;
+      }
+    
+      .services-container {
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      .service {
+        width: 100%;
+        margin: 15px 0;
+      }
+    
+      .service img {
+        width: 100%;
+        display: block;
+        transition: transform 0.3s ease;
+      }
+    
+      /* Simulate a hover effect for touch devices */
+      .service:active img,
+      .service:focus img,
+      .service:hover img {
+        transform: scale(1.05);
+      }
+      
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(166, 178, 181, 0.5);
+        opacity: 0;
+        transition: opacity 0.5s ease-out;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    
+      .overlay-text {
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+        transform: scale(0);
+        transition: transform 0.3s ease-out;
+      }
+    
+      .overlay-text p {
+        color: white;
+        font-size: 20px;
+        position: relative;
+        padding: 10px 0;
+      }
+    
+      /* Simulate a hover effect for touch devices */
+      .service:active .overlay,
+      .service:focus .overlay,
+      .service:hover .overlay {
+        opacity: 1;
+      }
+    
+      .service:active .overlay-text,
+      .service:focus .overlay-text,
+      .service:hover .overlay-text {
+        transform: scale(1);
+      }
+      .about-us {
+        padding: 50px 20px;
+      }
+    
+      .about-us h1 {
+        font-size: 2em;
+      }
+    
+      .about-us p {
+        font-size: 1em;
+      }
+    
+      .read-more-btn {
+        padding: 8px 20px;
+      }
+      .stats-grid {
+        grid-template-columns: 1fr; /* Stack the items on top of each other */
+      }
+    
+      .stats-and-image-section   .image-container {
+        order: -1; /* Place the image above the stats on mobile */
+        flex-basis: 100%; /* initial length of a flexible item*/
+      }
+    
+      .stat-item h2 {
+        font-size: 2.5em;
+      }
+    
+      .stat-item p {
+        font-size: 1em;
+      }
+      .post-container {
+        flex-direction: column; /* Stack the blog posts vertically on small screens */
+    }
+
+    .blog-post {
+        width: 100%; /* Full width for each blog post on small screens */
+        margin-bottom: 20px; /* Adjust bottom margin for spacing */
+    }
+
+    .date-day, .date-month {
+        text-align: center; /* Center the date text for mobile */
+    }
+
+    .post-title, .post-excerpt {
+        margin: 10px; /* Adjust margin for smaller screens */
+    }
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-column {
+      margin-bottom: 20px;
+      width: 100%; /* Make footer columns full width */
+      text-align: center; /* Center the content */
+    }
+    
+    .footer-bottom {
+      padding-top: 10px; /* Adjust padding for mobile */
+    }
+    .footer-column ul li a {
+      padding-left: 1.5em; /* Add padding to fit the mobile view */
+    }
+  
+    .footer-column ul li a::before {
+      position: absolute;
+      left: 0; /* Align to the left */
+      top: 0; /* Align to the top */
+      margin-left: -1.5em; /* Pull the arrow outside the padding area */
+    }
+
+}
